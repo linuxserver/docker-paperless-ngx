@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+mkdir -p /redis
+
+exec \
+    s6-setuidgid abc /usr/bin/redis-server /defaults/redis.conf

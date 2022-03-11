@@ -1,0 +1,42 @@
+#!/usr/bin/with-contenv bash
+
+PAPERLESS_REDIS=${REDIS_URL:-redis://localhost:6379}
+
+# remove services unless they're enabled
+if [[ -v "$REDIS_URL" ]]; then
+    rm -rf /etc/services.d/redis
+fi
+
+mkdir -p \
+    /config \
+    /data \
+    /data/media \
+    /data/consume
+
+mv /defaults/uwsgi.ini /app/paperless/src/uwsgi.ini > /dev/null 2>&1
+cp /defaults/imagemagick-policy.xml /etc/ImageMagick-6/policy.xml
+
+cd /app/paperless || exit
+
+# permissions
+chown -R abc:abc \
+    /app/paperless \
+    /config \
+    /data
+
+s6-setuidgid abc /usr/bin/python3 ./src/manage.py makemigrations
+s6-setuidgid abc /usr/bin/python3 ./src/manage.py migrate
+
+cat << EOF | s6-setuidgid abc python3 /app/paperless/src/manage.py shell
+from django.contrib.auth import get_user_model
+
+# see ref. below
+UserModel = get_user_model()
+
+if len(UserModel.objects.all()) == 1:
+    print("Creating new user")
+    user = UserModel.objects.create_user('admin', password='admin')
+    user.is_superuser = True
+    user.is_staff = True
+    user.save()
+EOF

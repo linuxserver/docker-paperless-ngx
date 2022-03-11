@@ -1,0 +1,47 @@
+---
+
+# project information
+project_name: paperless-ngx
+project_url: "https://github.com/paperless-ngx/paperless-ngx"
+project_logo: ""
+project_blurb: |
+  [{{ project_name|capitalize }}]({{ project_url }}) is an application by Daniel Quinn and contributors that indexes your scanned documents and allows you to easily search for documents and store metadata alongside your documents."
+
+project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+
+# supported architectures
+available_architectures:
+  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
+  - { arch: "{{ arch_armhf }}", tag: "arm32v7-latest"}
+
+# container parameters
+common_param_env_vars_enabled: true
+param_container_name: "{{ project_name }}"
+param_usage_include_vols: true
+param_volumes:
+  - { vol_path: "/config", vol_host_path: "</path/to/appdata/config>", desc: "Contains all relevant configuration files." }
+  - { vol_path: "/data", vol_host_path: "</path/to/appdata/data>", desc: "Storage location for all paperless-ngx data files." }
+param_usage_include_ports: true
+param_ports:
+  - { external_port: "8000", internal_port: "8000", port_desc: "http gui" }
+param_usage_include_env: true
+param_env_vars:
+  - { env_var: "TZ", env_value: "America/New_York", desc: "Specify a timezone to use EG America/New_York"}
+opt_param_usage_include_env: true
+opt_param_env_vars:
+  - { env_var: "REDIS_URL", env_value: "", desc: "Specify an external redis instance to use. Can optionally include a port (`redis:6379`) and/or db (`redis/foo`). If left blank or not included, will use a built-in redis instance. If changed after initial setup will also require manual modification of /config/settings.py"}
+
+# optional parameters
+optional_block_1: false
+optional_block_1_items: ""
+
+# application setup block
+app_setup_block_enabled: true
+app_setup_block: |
+  Default login is admin:admin via the webui, accessible at http://SERVERIP:PORT
+  More info at [paperless-ngx]({{ project_url }}).
+  For convenience this container provides an alias to perform administration management commands. Available administration commands are documented upstream [here](https://paperless-ng.readthedocs.io/en/latest/administration.html) and can be accessed with this container thus: `docker exec -it <container_name> manage <command>`. For example, `docker exec -it paperless manage  document_retagger -tT`.
+# changelog
+changelogs:
+  - { date: "11.03.22:", desc: "Initial Release." }
