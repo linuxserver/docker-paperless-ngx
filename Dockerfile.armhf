@@ -20,14 +20,14 @@ ARG BUILD_PACKAGES="\
   git \
   jq \
   libatlas-base-dev \
-  libleptonica-dev \
   libffi-dev \
+  libjpeg-dev \
+  libleptonica-dev \
   libpq-dev \
-  libqpdf-dev \
-  libxml2-dev \
-  libxslt-dev \
   libssl-dev \
   libtool \
+  libjpeg-dev \
+  libleptonica-dev \
   python3-dev \
   python3-pip \
   rustc \
@@ -48,9 +48,7 @@ ARG RUNTIME_PACKAGES="\
   pngquant \
   python3 \
   python3-setuptools \
-  qpdf \
   redis \
-  sudo \
   tesseract-ocr \
   tesseract-ocr-eng \
   tzdata \
@@ -82,7 +80,7 @@ RUN \
   mkdir -p /tmp/qpdf && \
   curl -o \
     /tmp/qpdf.tar.gz -L \
-    "https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.3.2/qpdf-10.3.2.tar.gz" && \
+    "https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.2/qpdf-10.6.2.tar.gz" && \
   tar xf \
     /tmp/qpdf.tar.gz -C \
     /tmp/qpdf --strip-components=1 && \
