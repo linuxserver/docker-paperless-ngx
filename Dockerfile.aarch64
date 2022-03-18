@@ -73,7 +73,7 @@ RUN \
   mkdir -p /tmp/qpdf && \
   curl -o \
     /tmp/qpdf.tar.gz -L \
-    "https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.3.2/qpdf-10.3.2.tar.gz" && \
+    "https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.3/qpdf-10.6.3.tar.gz" && \
   tar xf \
     /tmp/qpdf.tar.gz -C \
     /tmp/qpdf --strip-components=1 && \
