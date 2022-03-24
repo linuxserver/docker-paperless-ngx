@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv bash
+# for convenience use this manage alias like so `docker exec -it paperless manage <command>`
+# https://paperless-ng.readthedocs.io/en/latest/administration.html
+
+## set alias for manage.py
+[[ ! -f /usr/local/bin/manage ]] && \
+  echo -e '#!/bin/bash\n/usr/bin/python3 /app/paperless/src/manage.py $*' > /usr/local/bin/manage
+
+[[ ! -x /usr/local/bin/manage ]] && \
+  chmod +x /usr/local/bin/manage

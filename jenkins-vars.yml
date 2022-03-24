@@ -1,0 +1,30 @@
+---
+
+# jenkins variables
+project_name: docker-paperless-ngx
+external_type: github_stable
+release_type: stable
+release_tag: latest
+ls_branch: main
+armhf_native: true
+repo_vars:
+  - EXT_GIT_BRANCH = 'main'
+  - EXT_USER = 'paperless-ngx'
+  - EXT_REPO = 'paperless-ngx'
+  - BUILD_VERSION_ARG = 'PAPERLESS_RELEASE'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-paperless-ngx'
+  - CONTAINER_NAME = 'paperless-ngx'
+  - DOCKERHUB_IMAGE = 'linuxserver/paperless-ngx'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/paperless-ngx'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/paperless-ngx'
+  - DIST_IMAGE = 'ubuntu'
+  - MULTIARCH='true'
+  - CI='true'
+  - CI_WEB='true'
+  - CI_PORT='8000'
+  - CI_SSL='false'
+  - CI_DELAY='120'
+  - CI_DOCKERENV='TZ=America/New_York'
+  - CI_AUTH='user:password'
+  - CI_WEBPATH=''
