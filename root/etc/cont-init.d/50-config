@@ -3,7 +3,7 @@
 PAPERLESS_REDIS=${REDIS_URL:-redis://localhost:6379}
 
 # remove services unless they're enabled
-if [[ -v "$REDIS_URL" ]]; then
+if [[ -v "REDIS_URL" ]]; then
     rm -rf /etc/services.d/redis
 fi
 
