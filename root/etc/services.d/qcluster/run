@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bash
+
+cd /app/paperless/src || exit
+
+# remove services unless they're enabled
+if [[ -z "$REDIS_URL" ]]; then
+    echo "Waiting for redis to become available..."
+    sleep 10
+fi
+
+exec \
+    s6-setuidgid abc python3 manage.py qcluster
+
