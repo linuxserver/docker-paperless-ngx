@@ -229,5 +229,6 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **27.04.22:** - Add build-dependencies for arm32 builds.
 * **11.04.22:** - Replaced uwsgi with gunicorn due to websocket issues.
 * **11.03.22:** - Initial Release.
