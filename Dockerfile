@@ -38,8 +38,10 @@ ARG RUNTIME_PACKAGES="\
   libmagic-dev \
   libpoppler-cpp-dev \
   libxml2 \
+  libzbar0 \
   optipng \
   pngquant \
+  poppler-utils \
   python3 \
   python3-setuptools \
   qpdf \
