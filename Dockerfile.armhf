@@ -44,6 +44,7 @@ ARG RUNTIME_PACKAGES="\
   libmagic-dev \
   libpoppler-cpp-dev \
   libxml2 \
+  libxslt1.1 \
   libzbar0 \
   optipng \
   pngquant \
