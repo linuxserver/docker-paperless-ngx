@@ -31,14 +31,17 @@ ARG RUNTIME_PACKAGES="\
   gettext \
   ghostscript \
   gnupg \
+  gunicorn \
   icc-profiles-free \
   imagemagick \
   liblept5 \
   libmagic-dev \
   libpoppler-cpp-dev \
   libxml2 \
+  libzbar0 \
   optipng \
   pngquant \
+  poppler-utils \
   python3 \
   python3-setuptools \
   qpdf \
@@ -47,8 +50,6 @@ ARG RUNTIME_PACKAGES="\
   tesseract-ocr-eng \
   tzdata \
   unpaper \
-  uwsgi \
-  uwsgi-plugin-python3 \
   zlib1g"
 
 RUN \

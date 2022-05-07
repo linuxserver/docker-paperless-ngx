@@ -9,5 +9,5 @@ if [[ -z "$REDIS_URL" ]]; then
 fi
 
 exec \
-    s6-setuidgid abc /usr/local/bin/gunicorn -c /app/paperless/gunicorn.conf.py paperless.asgi:application
+    s6-setuidgid abc python3 manage.py qcluster
 
