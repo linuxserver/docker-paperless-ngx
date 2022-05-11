@@ -79,7 +79,7 @@ RUN \
   fi && \
   curl -o \
     /tmp/paperless.tar.gz -L \
-    "https://github.com/paperless-ngx/paperless-ngx/releases/download/${PAPERLESS_RELEASE}/paperless-${PAPERLESS_RELEASE}.tar.xz" && \
+    "https://github.com/paperless-ngx/paperless-ngx/releases/download/${PAPERLESS_RELEASE}/paperless-ngx-${PAPERLESS_RELEASE}.tar.xz" && \
   tar xf \
   /tmp/paperless.tar.gz -C \
     /app/paperless/ --strip-components=1 && \
