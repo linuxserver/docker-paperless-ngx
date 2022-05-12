@@ -83,8 +83,8 @@ services:
       - TZ=America/New_York
       - REDIS_URL= #optional
     volumes:
-      - </path/to/appdata/config>:/config
-      - </path/to/appdata/data>:/data
+      - /path/to/appdata/config:/config
+      - /path/to/appdata/data:/data
     ports:
       - 8000:8000
     restart: unless-stopped
@@ -100,8 +100,8 @@ docker run -d \
   -e TZ=America/New_York \
   -e REDIS_URL= `#optional` \
   -p 8000:8000 \
-  -v </path/to/appdata/config>:/config \
-  -v </path/to/appdata/data>:/data \
+  -v /path/to/appdata/config:/config \
+  -v /path/to/appdata/data:/data \
   --restart unless-stopped \
   lscr.io/linuxserver/paperless-ngx:latest
 ```
@@ -229,6 +229,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **11.05.22:** - Update upstream artifact name and utilize lsio wheels for scipy and scikit-learn.
 * **05.05.22:** - Add runtime dependencies libxslt1.1 for armhf
 * **30.04.22:** - Add runtime dependencies lizbar and poppler-utils
 * **27.04.22:** - Add build-dependencies for arm32 builds.
