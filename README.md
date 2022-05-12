@@ -42,7 +42,7 @@ Find us at:
 
 [Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) is an application by Daniel Quinn and contributors that indexes your scanned documents and allows you to easily search for documents and store metadata alongside your documents."
 
-[![paperless-ngx]()](https://github.com/paperless-ngx/paperless-ngx)
+[![paperless-ngx](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/paperless-ngx-banner.png)](https://github.com/paperless-ngx/paperless-ngx)
 
 ## Supported Architectures
 
