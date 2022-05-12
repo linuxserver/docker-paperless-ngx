@@ -3,7 +3,7 @@
 # project information
 project_name: paperless-ngx
 project_url: "https://github.com/paperless-ngx/paperless-ngx"
-project_logo: ""
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/paperless-ngx-banner.png"
 project_blurb: |
   [{{ project_name|capitalize }}]({{ project_url }}) is an application by Daniel Quinn and contributors that indexes your scanned documents and allows you to easily search for documents and store metadata alongside your documents."
 
@@ -20,8 +20,8 @@ common_param_env_vars_enabled: true
 param_container_name: "{{ project_name }}"
 param_usage_include_vols: true
 param_volumes:
-  - { vol_path: "/config", vol_host_path: "</path/to/appdata/config>", desc: "Contains all relevant configuration files." }
-  - { vol_path: "/data", vol_host_path: "</path/to/appdata/data>", desc: "Storage location for all paperless-ngx data files." }
+  - { vol_path: "/config", vol_host_path: "/path/to/appdata/config", desc: "Contains all relevant configuration files." }
+  - { vol_path: "/data", vol_host_path: "/path/to/appdata/data", desc: "Storage location for all paperless-ngx data files." }
 param_usage_include_ports: true
 param_ports:
   - { external_port: "8000", internal_port: "8000", port_desc: "http gui" }
@@ -44,6 +44,7 @@ app_setup_block: |
   For convenience this container provides an alias to perform administration management commands. Available administration commands are documented upstream [here](https://paperless-ng.readthedocs.io/en/latest/administration.html) and can be accessed with this container thus: `docker exec -it <container_name> manage <command>`. For example, `docker exec -it paperless manage  document_retagger -tT`.
 # changelog
 changelogs:
+  - { date: "11.05.22:", desc: "Update upstream artifact name and utilize lsio wheels for scipy and scikit-learn." }
   - { date: "05.05.22:", desc: "Add runtime dependencies libxslt1.1 for armhf" }
   - { date: "30.04.22:", desc: "Add runtime dependencies lizbar and poppler-utils" }
   - { date: "27.04.22:", desc: "Add build-dependencies for arm32 builds." }
