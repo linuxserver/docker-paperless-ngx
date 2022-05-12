@@ -25,6 +25,7 @@ ARG BUILD_PACKAGES="\
   libjpeg-dev \
   libleptonica-dev \
   libpq-dev \
+  libqpdf-dev \
   libssl-dev \
   libtool \
   python3-dev \
@@ -77,18 +78,6 @@ RUN \
   cp /tmp/jbig2enc/src/.libs/libjbig2enc* /usr/local/lib/ && \
   cp /tmp/jbig2enc/src/jbig2 /usr/local/bin/ && \
   cp /tmp/jbig2enc/src/*.h /usr/local/include/ && \
-  echo "**** install qpdf ****" && \
-  mkdir -p /tmp/qpdf && \
-  curl -o \
-    /tmp/qpdf.tar.gz -L \
-    "https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.2/qpdf-10.6.2.tar.gz" && \
-  tar xf \
-    /tmp/qpdf.tar.gz -C \
-    /tmp/qpdf --strip-components=1 && \
-  cd /tmp/qpdf && \
-  ./configure && \
-  make && \
-  make install && \
   echo "**** install paperless ****" && \
   mkdir -p /app/paperless && \
   if [ -z ${PAPERLESS_RELEASE+x} ]; then \
