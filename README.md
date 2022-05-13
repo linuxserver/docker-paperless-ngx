@@ -229,6 +229,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **12.05.22:** - Move migrations to after multilangocr mod. Fix disabling of redis.
 * **12.05.22:** - Utilize lsio wheel for pikepdf.
 * **11.05.22:** - Update upstream artifact name and utilize lsio wheels for scipy and scikit-learn.
 * **05.05.22:** - Add runtime dependencies libxslt1.1 for armhf

@@ -44,6 +44,7 @@ app_setup_block: |
   For convenience this container provides an alias to perform administration management commands. Available administration commands are documented upstream [here](https://paperless-ng.readthedocs.io/en/latest/administration.html) and can be accessed with this container thus: `docker exec -it <container_name> manage <command>`. For example, `docker exec -it paperless manage  document_retagger -tT`.
 # changelog
 changelogs:
+  - { date: "12.05.22:", desc: "Move migrations to after multilangocr mod. Fix disabling of redis." }
   - { date: "12.05.22:", desc: "Utilize lsio wheel for pikepdf." }
   - { date: "11.05.22:", desc: "Update upstream artifact name and utilize lsio wheels for scipy and scikit-learn." }
   - { date: "05.05.22:", desc: "Add runtime dependencies libxslt1.1 for armhf" }

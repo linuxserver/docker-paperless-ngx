@@ -23,20 +23,3 @@ chown -R abc:abc \
     /app/paperless \
     /config \
     /data
-
-s6-setuidgid abc /usr/bin/python3 ./src/manage.py makemigrations
-s6-setuidgid abc /usr/bin/python3 ./src/manage.py migrate
-
-cat << EOF | s6-setuidgid abc python3 /app/paperless/src/manage.py shell
-from django.contrib.auth import get_user_model
-
-# see ref. below
-UserModel = get_user_model()
-
-if len(UserModel.objects.all()) == 1:
-    print("Creating new user")
-    user = UserModel.objects.create_user('admin', password='admin')
-    user.is_superuser = True
-    user.is_staff = True
-    user.save()
-EOF
