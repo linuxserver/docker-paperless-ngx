@@ -44,6 +44,7 @@ ARG RUNTIME_PACKAGES="\
   liblept5 \
   libmagic-dev \
   libpoppler-cpp-dev \
+  libpq5 \
   libxml2 \
   libxslt1.1 \
   libzbar0 \
@@ -52,6 +53,7 @@ ARG RUNTIME_PACKAGES="\
   poppler-utils \
   python3 \
   python3-setuptools \
+  qpdf \
   redis \
   tesseract-ocr \
   tesseract-ocr-eng \
