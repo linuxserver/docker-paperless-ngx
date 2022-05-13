@@ -37,6 +37,7 @@ ARG RUNTIME_PACKAGES="\
   liblept5 \
   libmagic-dev \
   libpoppler-cpp-dev \
+  libpq5 \
   libxml2 \
   libzbar0 \
   optipng \
