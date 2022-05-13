@@ -16,8 +16,6 @@ mkdir -p \
 mv /defaults/uwsgi.ini /app/paperless/src/uwsgi.ini > /dev/null 2>&1
 cp /defaults/imagemagick-policy.xml /etc/ImageMagick-6/policy.xml
 
-cd /app/paperless || exit
-
 # permissions
 chown -R abc:abc \
     /app/paperless \

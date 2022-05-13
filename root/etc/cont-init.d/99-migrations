@@ -1,5 +1,7 @@
 #!/usr/bin/with-contenv bash
 
+cd /app/paperless || exit
+
 s6-setuidgid abc /usr/bin/python3 ./src/manage.py makemigrations
 s6-setuidgid abc /usr/bin/python3 ./src/manage.py migrate
 
