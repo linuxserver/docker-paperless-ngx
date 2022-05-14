@@ -2,6 +2,8 @@
 
 cd /app/paperless || exit
 
+export PAPERLESS_REDIS=${REDIS_URL:-redis://localhost:6379}
+
 s6-setuidgid abc /usr/bin/python3 ./src/manage.py makemigrations
 s6-setuidgid abc /usr/bin/python3 ./src/manage.py migrate
 
