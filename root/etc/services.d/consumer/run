@@ -8,6 +8,7 @@ if [[ -z "$REDIS_URL" ]]; then
     sleep 10
 fi
 
+export PAPERLESS_REDIS=${REDIS_URL:-redis://localhost:6379}
+
 exec \
     s6-setuidgid abc python3 manage.py document_consumer
-
