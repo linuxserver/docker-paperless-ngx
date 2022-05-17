@@ -89,6 +89,12 @@ RUN \
   cd /app/paperless && \
   pip3 install -U pip setuptools==60.10.0 wheel && \
   pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/ubuntu/ -r requirements.txt && \
+  echo "**** add libqpdf ****" && \
+  curl -o \
+    /tmp/libqpdf.tar -L \
+    "https://wheels.linuxserver.io/ubuntu/libqpdf-focal-arm64v8.tar" && \
+  tar xvPf \
+    /tmp/libqpdf.tar && \
   echo "**** cleanup ****" && \
   apt-get purge -y --auto-remove \
     $BUILD_PACKAGES && \
