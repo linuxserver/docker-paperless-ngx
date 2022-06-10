@@ -61,9 +61,9 @@ libaudit-common1:2.8.5-2ubuntu6
 libavahi-client30.7-4ubuntu7.1
 libavahi-common30.7-4ubuntu7.1
 libavahi-common-data0.7-4ubuntu7.1
-libavcodec587:4.2.4-1ubuntu0.1
-libavformat587:4.2.4-1ubuntu0.1
-libavutil567:4.2.4-1ubuntu0.1
+libavcodec587:4.2.7-0ubuntu0.1
+libavformat587:4.2.7-0ubuntu0.1
+libavutil567:4.2.7-0ubuntu0.1
 libblkid12.34-0.1ubuntu9.3
 libbluray21:1.2.0-1
 libbrotli11.0.7-6ubuntu0.1
@@ -130,7 +130,7 @@ libjemalloc25.2.1-1ubuntu1
 libjpeg88c-2ubuntu8
 libjpeg-turbo82.0.3-0ubuntu1.20.04.1
 libk5crypto31.17-6ubuntu4.1
-libkeyutils11.6-6ubuntu1
+libkeyutils11.6-6ubuntu1.1
 libkrb5-26-heimdal7.7.0+dfsg-1ubuntu1
 libkrb5-31.17-6ubuntu4.1
 libkrb5support01.17-6ubuntu4.1
@@ -212,7 +212,7 @@ libssh-40.9.3-2ubuntu2.2
 libssh-gcrypt-40.9.3-2ubuntu2.2
 libssl1.11.1.1f-1ubuntu2.13
 libstdc++610.3.0-1ubuntu1~20.04
-libswresample37:4.2.4-1ubuntu0.1
+libswresample37:4.2.7-0ubuntu0.1
 libsystemd0245.4-4ubuntu3.15
 libtasn1-64.16.0-2
 libtesseract44.1.1-2build2
