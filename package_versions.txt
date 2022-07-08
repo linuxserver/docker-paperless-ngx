@@ -159,7 +159,7 @@ libnettle73.5.1+really3.5.1-2ubuntu0.2
 libnghttp2-141.40.0-1build1
 libnpth01.6-1
 libnspr42:4.25-1
-libnss32:3.49.1-1ubuntu1.7
+libnss32:3.49.1-1ubuntu1.8
 libnuma12.0.12-1
 libogg01.3.4-0ubuntu1
 libopenjp2-72.3.1-1ubuntu4.20.04.1
