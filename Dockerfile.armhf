@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/baseimage-ubuntu:arm32v7-focal
+FROM ghcr.io/linuxserver/baseimage-ubuntu:arm32v7-jammy
 
 # set version label
 ARG BUILD_DATE
@@ -97,7 +97,7 @@ RUN \
   pip3 install -U --no-cache-dir pip setuptools==60.10.0 wheel && \
   pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/ubuntu/ -r requirements.txt && \
   echo "**** add libqpdf ****" && \
-  LIBQPDFURL=$(curl -sL https://wheel-index.linuxserver.io/ubuntu/ | grep "focal-arm32v7.tar" | sed "s|.*'\(.*\)'.*|\1|") && \
+  LIBQPDFURL=$(curl -sL https://wheel-index.linuxserver.io/ubuntu/ | grep "jammy-arm32v7.tar" | sed "s|.*'\(.*\)'.*|\1|") && \
   curl -o \
     /tmp/libqpdf.tar -L \
     "${LIBQPDFURL}" && \
