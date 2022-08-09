@@ -85,9 +85,9 @@ RUN \
     /tmp/paperless.tar.gz -C \
     /app/paperless/ --strip-components=1 && \
   echo "**** install pip packages ****" && \
-  cd /app/paperless && \
+  cd / && \
   pip3 install -U pip setuptools==60.10.0 wheel && \
-  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/ubuntu/ -r requirements.txt && \
+  pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/ubuntu/ -r /app/paperless/requirements.txt && \
   echo "**** cleanup ****" && \
   apt-get purge -y --auto-remove \
     $BUILD_PACKAGES && \
