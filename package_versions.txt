@@ -182,7 +182,7 @@ libpoppler970.86.1-0ubuntu1
 libpoppler-cpp0v50.86.1-0ubuntu1
 libpoppler-cpp-dev0.86.1-0ubuntu1
 libpoppler-dev0.86.1-0ubuntu1
-libpq512.11-0ubuntu0.20.04.1
+libpq512.12-0ubuntu0.20.04.1
 libprocps82:3.3.16-1ubuntu2.3
 libpsl50.21.0-1ubuntu1
 libpython3.8-minimal3.8.10-0ubuntu1~20.04.5
