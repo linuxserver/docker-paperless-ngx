@@ -6,8 +6,12 @@ project_url: "https://github.com/paperless-ngx/paperless-ngx"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/paperless-ngx-banner.png"
 project_blurb: |
   [{{ project_name|capitalize }}]({{ project_url }}) is an application by Daniel Quinn and contributors that indexes your scanned documents and allows you to easily search for documents and store metadata alongside your documents."
-
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+
+project_deprecation_status: true
+project_deprecation_message: |
+  We recommend switching to the new official container: 
+  https://github.com/paperless-ngx/paperless-ngx
 
 # supported architectures
 available_architectures:
