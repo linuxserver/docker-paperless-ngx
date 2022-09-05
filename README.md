@@ -27,6 +27,12 @@ Find us at:
 * [GitHub](https://github.com/linuxserver) - view the source for all of our repositories.
 * [Open Collective](https://opencollective.com/linuxserver) - please consider helping us by either donating or contributing to our budget
 
+# DEPRECATION NOTICE
+
+This image is deprecated. We will not offer support for this image and it will not be updated.
+We recommend switching to the new official container: 
+https://github.com/paperless-ngx/paperless-ngx
+
 # [linuxserver/paperless-ngx](https://github.com/linuxserver/docker-paperless-ngx)
 
 [![Scarf.io pulls](https://scarf.sh/installs-badge/linuxserver-ci/linuxserver%2Fpaperless-ngx?color=94398d&label-color=555555&logo-color=ffffff&style=for-the-badge&package-type=docker)](https://scarf.sh/gateway/linuxserver-ci/docker/linuxserver%2Fpaperless-ngx)
@@ -229,6 +235,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **05.09.22:** - Deprecate.
 * **16.05.22:** - Add correct libqpdf.so to arm builds.
 * **14.05.22:** - Fine tune disabling of redis.
 * **12.05.22:** - Move migrations to after multilangocr mod. Fix disabling of redis. Add missing dep for postgresql.
