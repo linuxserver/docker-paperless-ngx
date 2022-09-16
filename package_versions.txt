@@ -97,8 +97,8 @@ libfreetype62.10.1-2ubuntu0.2
 libfribidi01.0.8-2ubuntu0.1
 libgcc-s110.3.0-1ubuntu1~20.04
 libgcrypt201.8.5-5ubuntu1.1
-libgdk-pixbuf2.0-02.40.0+dfsg-3ubuntu0.3
-libgdk-pixbuf2.0-common2.40.0+dfsg-3ubuntu0.3
+libgdk-pixbuf2.0-02.40.0+dfsg-3ubuntu0.4
+libgdk-pixbuf2.0-common2.40.0+dfsg-3ubuntu0.4
 libgif75.1.9-1
 libglib2.0-02.64.6-1~ubuntu20.04.4
 libgme00.6.2-1build1
@@ -178,10 +178,10 @@ libpcre2-8-010.34-7
 libpcre32:8.39-12build1
 libpixman-1-00.38.4-0ubuntu1
 libpng16-161.6.37-2
-libpoppler970.86.1-0ubuntu1
-libpoppler-cpp0v50.86.1-0ubuntu1
-libpoppler-cpp-dev0.86.1-0ubuntu1
-libpoppler-dev0.86.1-0ubuntu1
+libpoppler970.86.1-0ubuntu1.1
+libpoppler-cpp0v50.86.1-0ubuntu1.1
+libpoppler-cpp-dev0.86.1-0ubuntu1.1
+libpoppler-dev0.86.1-0ubuntu1.1
 libpq512.12-0ubuntu0.20.04.1
 libprocps82:3.3.16-1ubuntu2.3
 libpsl50.21.0-1ubuntu1
@@ -219,7 +219,7 @@ libtesseract44.1.1-2build2
 libthai00.1.28-3
 libthai-data0.1.28-3
 libtheora01.1.1+dfsg.1-15ubuntu2
-libtiff54.1.0+git191117-2ubuntu0.20.04.3
+libtiff54.1.0+git191117-2ubuntu0.20.04.4
 libtinfo66.2-0ubuntu2
 libtwolame00.4.0-2
 libudev1245.4-4ubuntu3.15
@@ -276,7 +276,7 @@ perl-base5.30.0-9ubuntu0.2
 pinentry-curses1.1.0-3build1
 pngquant2.12.2-1
 poppler-data0.4.9-2
-poppler-utils0.86.1-0ubuntu1
+poppler-utils0.86.1-0ubuntu1.1
 procps2:3.3.16-1ubuntu2.3
 publicsuffix20200303.0012-1
 python33.8.2-0ubuntu2
